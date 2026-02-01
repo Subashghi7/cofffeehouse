@@ -16,5 +16,9 @@ sequelize
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
+db.coffee = require("./models/coffee.model")(sequelize,DataTypes)
 
+sequelize.sync({force:false}).then(()=>{
+  console.log("migration is success")
+})
 module.exports = db
