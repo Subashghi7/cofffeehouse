@@ -1,20 +1,22 @@
 
-const coffeemodel = (sequelize, DataTypes) => {
-  const Coffee = sequelize.define("coffee", {
-    coffeeName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    coffeeLocation:{
-        type: DataTypes.STRING,
-        allowNull:true
-    },
-    coffeePrice:{
+const coffeemodel=(sequelize,DataTypes)=>{
+  const Coffee= sequelize.define("coffee",{
+      coffeeName:{
+        type:DataTypes.STRING,
+        allowNull:false
+
+      },
+      coffeeLocation:{
+        type:DataTypes.STRING,
+        allowNull:false
+      },
+      coffeePrice:{
         type:DataTypes.INTEGER,
         allowNull:false
-    }
-  });
-  return Coffee
-};
+      }
 
-module.exports= coffeemodel
+})
+return Coffee
+}
+
+module.exports=coffeemodel
